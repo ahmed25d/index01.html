@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving News Bar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .news-bar {
+            background-color: #333;
+            color: white;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            padding: 10px 0;
+        }
+
+        .news-bar-content {
+            display: inline-block;
+            animation: scroll 10s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .news-bar span {
+            margin: 0 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="news-bar">
+        <div class="news-bar-content">
+            <span>Breaking News: AI is revolutionizing the tech industry!</span>
+            <span>Latest Update: Stock markets hit record highs today!</span>
+            <span>Weather Alert: Heavy rain expected in some areas tomorrow.</span>
+            <span>Sports: Local team wins the championship!</span>
+        </div>
+    </div>
+
+    <div style="margin-top: 50px; padding: 20px;">
+        <h1>Welcome to the News Website</h1>
+        <p>Scroll down to explore the content while the news ticker keeps you updated!</p>
+    </div>
+</body>
+</html>
